@@ -1,6 +1,11 @@
 Compilación: npm run build:web
-Resultado: PASS. Expo SDK 57, 197 módulos, exportación en dist.
-Interfaz: Chromium, viewport 390 x 844, datos reales de Open-Meteo.
-Resultado: PASS. Buscar y seleccionar Toluca/Madrid, actualizar y búsqueda inexistente. Sin errores JavaScript.
-Capturas: 01-toluca.png, 02-madrid.png, 03-sin-resultados.png.
-Limitación: sin prueba en dispositivo físico ni instalación limpia independiente.
+Resultado: PASS. Expo SDK 58.0.22, 191 módulos, exportación en dist.
+Instalación: dependencias independientes instaladas en brisa; package-lock.json incluido.
+Versiones: React 19.3.0, React Native 0.88.1, React Native Web 0.21.4, Metro Runtime 58.0.16.
+Alineación: versiones coinciden con node_modules/expo/bundledNativeModules.json.
+expo install --check: PASS en modo offline (comprobación remota limitada por permisos de caché).
+Pruebas unitarias: 3 grupos aprobados, 0 fallidos.
+Interfaz SDK58: Chromium, viewport 390 x 844, datos reales de Open-Meteo.
+Resultado: PASS. Toluca México, Madrid España, actualizar y búsqueda inexistente. Sin errores JavaScript.
+Capturas actualizadas: 01-toluca.png, 02-madrid.png, 03-sin-resultados.png.
+Limitación: la ejecución en dispositivo físico queda pendiente.

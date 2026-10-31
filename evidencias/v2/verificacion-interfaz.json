@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-10-31T16:44:09.426Z",
+  "gps": "Coordenadas simuladas de Ciudad de México para probar el permiso; clima real de Open-Meteo.",
+  "checks": [
+    "Ubicación inicial con permiso y clima real",
+    "Autocompletado sin pulsar Buscar; selección y fijado de Toluca",
+    "Madrid España, pronóstico de siete días y desplazamiento vertical",
+    "Ciudades y °F persisten al recargar; GPS no se guarda",
+    "Desplazamiento horizontal cambia la ciudad activa",
+    "Reordenar y eliminar fijadas",
+    "Búsqueda sin resultados",
+    "Recuperación de clima guardado al fallar la API",
+    "Permiso denegado no bloquea la búsqueda manual"
+  ],
+  "autocompleteCalls": 3,
+  "status": "PASS"
+}

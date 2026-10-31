@@ -1,14 +1,20 @@
+# Brisa 2.0
+
+El proyecto se actualizó con ubicación actual, autocompletado, ciudades fijadas, persistencia y pronóstico. Consulta MEJORAS-V2.md para las instrucciones vigentes. El Word está actualizado a Brisa 2.0. La documentación que sigue debajo corresponde a la primera entrega; MEJORAS-V2.md contiene las instrucciones vigentes.
+
+---
+
 # Actividad 17 — Brisa: consulta meteorológica
 
 **Asignatura:** Desarrollo móvil · **Docente:** R. Vinicio Camacho  
 **Escenario elegido:** A. Consulta meteorológica  
-**Equipo / integrantes:** Joel Alejandro Lara Rodriguez, Jaime Diaz Gonzalez, Marcelino Zahid Galicia Bonifacio, Jesus Diaz Serafin
+**Equipo / integrantes:** completar con los nombres del equipo.
 
 ## Objetivo y solución
 Prototipo nuevo en React Native y Expo que consume una API externa sin base de datos propia. Permite buscar ciudades, elegir entre ubicaciones homónimas, consultar temperatura y condición meteorológica, humedad, viento y sensación térmica, y actualizar el resultado. Los datos permanecen únicamente en memoria. No solicita GPS ni registro.
 
 ## Ejecutar
-Requisitos: Node.js 22, npm y Expo Go compatible con Expo SDK 57 (o emulador/build de desarrollo compatible).
+Requisitos: Node.js 22, npm y Expo Go compatible con Expo SDK 58 (o emulador/build de desarrollo compatible).
 
 ```powershell
 cd C:\9noCuatri\examen-vini\app-web-unidad2\actividad17\brisa
@@ -85,8 +91,25 @@ Resultado: consulta real inexistente sin resultados. Tres grupos de pruebas auto
 `App.js`: pantalla móvil. `src/api.js`: validación y consumo GET. `tests/`: verificaciones automatizadas y consultas reales. `evidencias/`: respuestas y capturas cuando estén disponibles. `package.json`, `app.json`, `index.js`: proyecto reproducible. Este README: documentación de API, seguridad y pruebas. No entregar `node_modules`, `.expo` ni cachés npm.
 
 
-## Evidencia visual y compilación
-La exportación Expo para web terminó correctamente (197 módulos). Se probó la interfaz en Chromium con ancho de teléfono; las tres capturas corresponden a la aplicación real, sin respuestas simuladas. videncias/03-sin-resultados.png documenta la búsqueda inexistente. La prueba de interfaz está en 	ests/browser.cjs; requiere Playwright y Chromium, configurables con PLAYWRIGHT_PATH y CHROMIUM_PATH, y servir dist en http://127.0.0.1:8177. La herramienta agent-browser no pudo instalarse por la descarga del paquete; se utilizó Playwright local.
+## Compatibilidad con Expo Go SDK 58
+El proyecto se actualizó a Expo 58.0.22, React 19.3.0, React Native 0.88.1, React Native Web 0.21.4 y Metro Runtime 58.0.16. Las versiones coinciden con el mapa bundledNativeModules de Expo instalado. Se instalaron las dependencias del proyecto, se compiló la versión web con 191 módulos y pasaron las tres pruebas unitarias.
 
-Para la comprobación local se reutilizaron dependencias existentes mediante un enlace de node_modules, excluido del ZIP. En otra computadora ejecutar npm install dentro del proyecto. La instalación limpia y el uso en dispositivo físico quedan pendientes de comprobar.
+Si el teléfono tiene Expo Go SDK 58, cerrar el servidor anterior y ejecutar desde esta carpeta:
+
+```powershell
+npm install
+npx expo install --fix
+npx expo install --check
+npx expo start --clear
+```
+
+Escanear el nuevo QR. No abrir un QR anterior del proyecto con SDK 57. No basta con editar app.json; las versiones de las dependencias deben estar alineadas. En caso de problemas de red, conectar ambos equipos a la misma Wi-Fi o ejecutar `npx expo start --tunnel`.
+
+## Evidencia visual y compilación
+La compilación web actualizada se realizó con SDK 58. Las capturas están en `evidencias/01-toluca.png`, `evidencias/02-madrid.png` y `evidencias/03-sin-resultados.png`. La prueba de interfaz está en `tests/browser.cjs`; requiere Playwright y Chromium, configurables con PLAYWRIGHT_PATH y CHROMIUM_PATH, y servir dist en http://127.0.0.1:8177. Los fallos HTTP y de red se simulan únicamente en las pruebas unitarias.
+
+Se incluye `Actividad17-Documentacion-Brisa.docx` con la documentación y capturas. El ZIP contiene código, archivo de bloqueo de dependencias, pruebas y evidencias; excluye node_modules, .expo, dist y cachés. La ejecución en teléfono físico sigue pendiente de comprobar.
+
+Guía oficial: https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/
+
 

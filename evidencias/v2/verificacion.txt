@@ -1,0 +1,11 @@
+BRISA 2.0 — VERIFICACIÓN
+Expo SDK 58.0.22. React 19.3.0. React Native 0.88.1.
+Web: exportación correcta, 290 módulos y una fuente de iconos.
+Android: exportación JavaScript/Hermes correcta, 667 módulos. No es un APK ni prueba de teléfono físico.
+Lógica: 9 pruebas aprobadas, 0 fallidas.
+Interfaz: 9 comprobaciones aprobadas. Registro detallado en verificacion-interfaz.json.
+Incluye ubicación, autocompletado, fijadas, persistencia, desplazamiento horizontal y vertical, reordenación, eliminación, búsqueda vacía, modo de datos guardados y permiso denegado.
+GPS de navegador: coordenadas simuladas de Ciudad de México; consultas meteorológicas reales.
+Permiso denegado y caída de API: escenarios simulados de prueba.
+API adicional: consultas reales de Toluca y Madrid, 24 horas normalizadas y 7 días.
+Pendiente: ejecución física con Expo Go SDK 58 y permiso de ubicación en el teléfono del usuario.
