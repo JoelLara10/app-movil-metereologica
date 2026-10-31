@@ -1,0 +1,6 @@
+Compilación: npm run build:web
+Resultado: PASS. Expo SDK 57, 197 módulos, exportación en dist.
+Interfaz: Chromium, viewport 390 x 844, datos reales de Open-Meteo.
+Resultado: PASS. Buscar y seleccionar Toluca/Madrid, actualizar y búsqueda inexistente. Sin errores JavaScript.
+Capturas: 01-toluca.png, 02-madrid.png, 03-sin-resultados.png.
+Limitación: sin prueba en dispositivo físico ni instalación limpia independiente.
